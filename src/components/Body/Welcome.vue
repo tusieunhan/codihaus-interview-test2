@@ -1,15 +1,10 @@
-<script setup></script>
+<script setup>
+  import Title from '../Title/Title.vue';
+</script>
 
 <template>
   <div class="body-welcome flex-center">
-    <div class="title-G body-welcome-title">
-      <div class="title-second">
-        <p class="color-second w-700">Welcome to Meddical</p>
-      </div>
-      <div class="title-primary">
-        <p class="color-primary font-yeseva">A Great Place to Receive Care</p>
-      </div>
-    </div>
+    <Title title="Welcome to Meddical" desc="A Great Place to Receive Care" classes="body-welcome-title" />
     <div class="body-welcome__desc">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
@@ -20,14 +15,12 @@
     </div>
     <div class="body-welcome__btn flex gap-10 hover-o">
       <p class="color-second">Learn More</p>
-      <img class="move" src="./icon/Vector.png" alt="" />
+      <img class="move" src="../../assets/icon/Vector.png" alt="" />
     </div>
-    <img class="w-full banner2" src="./img/Group 183.png" alt="" />
+    <img class="w-full banner2" src="../../assets/img/Group 183.png" alt="" />
   </div>
 </template>
 
 <style scoped>
-a {
-  color: #42b983;
-}
+
 </style>

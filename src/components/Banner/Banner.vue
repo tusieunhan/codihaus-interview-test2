@@ -1,4 +1,12 @@
-<script setup></script>
+<script >
+import Button from '../Button/Button.vue';
+export default {
+  components:{
+    Button
+  }
+}
+
+</script>
 
 <template>
   <div class="banner flex-center">
@@ -7,15 +15,13 @@
       <p class="banner-info__text color-primary font-yeseva">
         Leading the Way in Medical Excellence
       </p>
-      <div class="group_btn banner-btn btn color-primary bg-acceny">
-        Appointment
-      </div>
+      <Button text="Appointment" class="btn-banner"/>
     </div>
   </div>
 </template>
 
 <style scoped>
-a {
-  color: #42b983;
+.btn-banner{
+  width: min-content;
 }
 </style>

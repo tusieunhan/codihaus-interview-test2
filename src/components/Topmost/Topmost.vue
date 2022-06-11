@@ -6,17 +6,17 @@ export default {
       parentMessage: "Parent",
       items: [
         {
-          nameIcon: "icon/177.png",
+          nameIcon: "/src/assets/icon/177.png",
           name: "Emergency",
           desc: "(237) 681-812-255",
         },
         {
-          nameIcon: "icon/188.png",
+          nameIcon: "/src/assets/icon/188.png",
           name: "LOCATION",
           desc: "0123 Some Place",
         },
         {
-          nameIcon: "icon/178.png",
+          nameIcon: "/src/assets/icon/178.png",
           name: "WORK HOUR",
           desc: "09:00 - 20:00 Everyday",
         },

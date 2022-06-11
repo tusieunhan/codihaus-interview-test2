@@ -1,4 +1,26 @@
-<script setup></script>
+<script >
+import { ref } from 'vue'
+
+  export default {
+      setup(){
+         const infoBooking = ref({
+            name : "",
+            email :"",
+            gender : "",
+            phone : "",
+            date : "2022-02-22",
+            time : "11:22",
+            doctor : "",
+            department: "",
+            message : ""
+      })
+      const handleSubmit = ()=>{
+        console.log(infoBooking)
+      }
+      return { infoBooking ,handleSubmit }
+    }
+  }
+</script>
 
 <template>
   <div class="book">
@@ -16,30 +38,31 @@
             porttitor enim et.
           </p>
         </div>
-        <div class="sub-content__input flex">
+        <form @submit.prevent="handleSubmit" class="sub-content__input flex">
           <div class="sub-content__input-list">
-            <input type="text" placeholder="Name" />
-            <select>
-              <option value="Gender">Gender</option>
+            <input type="text" placeholder="Name" v-model="infoBooking.name" />
+            <select v-model="infoBooking.gender">
+              <option disabled value>Gender</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
-            <input type="text" placeholder="Email" />
-            <input type="text" placeholder="Phone" />
-            <input type="date" placeholder="Date" value="2000-10-29" />
-            <input type="time" placeholder="Time" value="22:22" />
-            <select>
-              <option value="Gender">Doctor</option>
+            <input type="text" placeholder="Email" v-model="infoBooking.email"/>
+            <input type="text" placeholder="Phone" v-model="infoBooking.phone"/>
+            <input type="date" placeholder="Date" v-model="infoBooking.date" />
+            <input type="time" placeholder="Time"  v-model="infoBooking.time" />
+            <select v-model="infoBooking.doctor">
+              <option value disabled >Doctor</option>
               <option value="Male">Tu Le</option>
               <option value="Female">Van Tu</option>
             </select>
-            <select>
-              <option value="Gender">Department</option>
-              <option value="Male">Department</option>
-              <option value="Female">Department</option>
+            <select  v-model="infoBooking.department" >
+              <option value disabled >Department</option>
+              <option value="Department">Haha hihi</option>
+              <option value="Department">Hihi haha</option>
             </select>
           </div>
           <textarea
+           v-model="infoBooking.message" 
             name=""
             id=""
             cols="30"
@@ -47,11 +70,12 @@
             placeholder="Message"
           ></textarea>
           <button
+            type="submit"
             class="sub-content__input-btn bg-acceny color-primary w-full w-900"
           >
             Submit
           </button>
-        </div>
+        </form >
       </div>
     </div>
   </div>
