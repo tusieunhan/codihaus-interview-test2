@@ -135,6 +135,7 @@ export default {
       clickable: true,
     }"
     :modules="modules"
+    :loop="true"
     class="body-doctor__list"
   >
       <swiper-slide v-for="(doctor,index) in doctors " :key="index">

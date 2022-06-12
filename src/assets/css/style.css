@@ -327,7 +327,7 @@
 .sub-content__input textarea {
   width: calc(100% - 22px);
 }
-input::-webkit-calendar-picker-indicator {
+.sub-content__input input::-webkit-calendar-picker-indicator {
   background-image: url(../icon/Down.png);
   right: 10px;
 }
@@ -355,14 +355,7 @@ select {
 .body-doctor {
   margin: 50px 0;
 }
-.body-doctor__list {
-  margin: 30px 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  height: 588px;
-  width: 100%;
-}
+
 .body-doctor__item {
   border-radius: var(--radius);
   overflow: hidden;
@@ -398,6 +391,13 @@ select {
   height: 46px;
   cursor: pointer;
 }
+.swiper-slide, .swiper-slide-duplicate, .swiper-slide-visible, .swiper-slide-prev{
+  transform: none !important;
+}
+ .swiper-slide-shadow-right,
+ .swiper-slide-shadow-left {
+    background-image: none !important;
+}
 .swiper-pagination,
 .wiper-pagination-clickable,
 .swiper-pagination-bullets,
@@ -407,6 +407,9 @@ select {
   justify-content: center;
   gap: 10px;
   cursor: pointer;
+}
+.swiper-slide-active{
+  background: none;
 }
 .swiper-pagination-bullet  {
   height: 18px !important;

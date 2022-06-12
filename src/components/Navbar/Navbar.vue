@@ -59,7 +59,7 @@ import Button from '../Button/Button.vue'
         MEDDICAL
       </div>
       <div class="navbar-group flex gap-20">
-        <input v-show="isSearch" v-model="textSearch" 
+        <input v-show="isSearch" v-model="textSearch"  placeholder="Search"
         class="inputSearch" type="text" >
         <img
           src="../../assets/icon/175.png"
@@ -85,5 +85,13 @@ import Button from '../Button/Button.vue'
   padding: 0 15px;
   margin-right: -60px;
   background-color: #bfd2f8;
+  background-color: var(--accent-color);
+  caret-color: var(--primary-color);
+  color: var(--primary-color);
+  outline: none;
+  font-family: "Poppins";
+}
+input::placeholder {
+  color: var(--primary-color);
 }
 </style>
