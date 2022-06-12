@@ -25,6 +25,10 @@ export default {
     props:{
         data: Object
     },
+    setup(props){
+      const { data } = props;
+      console.log(data)
+    }
 }
 </script>
 
