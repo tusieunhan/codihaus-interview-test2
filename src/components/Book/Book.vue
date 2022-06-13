@@ -1,9 +1,11 @@
 <script >
-import { ref } from 'vue'
-
+import { reactive, watchEffect } from 'vue'
+import { useStore } from 'vuex'
+import { BOOK_TITLE,BOOK_DESC } from '../../Constant'
   export default {
       setup(){
-         const infoBooking = ref({
+        const store = useStore()
+         const infoBooking = reactive({
             name : "",
             email :"",
             gender : "",
@@ -14,10 +16,12 @@ import { ref } from 'vue'
             department: "",
             message : ""
       })
+        watchEffect(()=> store.commit("setBooking",{...infoBooking}))
       const handleSubmit = ()=>{
+        const {infoBooking} = store.state;
         console.log(infoBooking)
       }
-      return { infoBooking ,handleSubmit }
+      return { infoBooking ,handleSubmit,BOOK_TITLE,BOOK_DESC }
     }
   }
 </script>
@@ -29,13 +33,10 @@ import { ref } from 'vue'
       <div class="book__sub-content content flex-between">
         <div class="sub-content__desc">
           <p class="sub-content__desc-title color-second font-yeseva">
-            Book an Appointment
+           {{BOOK_TITLE}}
           </p>
           <p class="sub-content__desc-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            placerat scelerisque tortor ornare ornare. Convallis felis vitae
-            tortor augue. Velit nascetur proin massa in. Consequat faucibus
-            porttitor enim et.
+            {{BOOK_DESC}}
           </p>
         </div>
         <form @submit.prevent="handleSubmit" class="sub-content__input flex">

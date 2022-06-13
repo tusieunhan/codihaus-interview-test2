@@ -1,46 +1,32 @@
 <script >
-import { reactive, ref } from 'vue';
+import {  reactive, ref, watchEffect } from 'vue';
 import Button from '../Button/Button.vue'
+import {routes } from '../../routes';
+import { useStore } from 'vuex';
   export default {
     components:{
       Button
     },  
+    data(){
+      return {
+         isModel: false
+      }
+    },
     setup(){
     const isSearch = ref(false)
+    // let isModel = ref(false)
     const textSearch = ref(null)
-    const routes = reactive([
-      {
-      name : 'Home',
-      to : "/home"
-    },
-      {
-      name : 'About us',
-      to : "/about"
-    },
-      {
-      name : "Services",
-      to : "/services"
-    },
-      {
-      name : 'Doctors',
-      to : "/doctors"
-    },
-      {
-      name : 'News',
-      to : "/news"
-    },
-      {
-      name : 'Contact',
-      to : "/contact"
-    }])
+    const store = useStore()
+
     const handleSearch = () =>{
       if(textSearch.value){
-        console.log(textSearch.value)
+        watchEffect(()=> store.commit("setTextSearch",{text : textSearch.value}))
       }else{
         isSearch.value = !isSearch.value;
       }
     }
-    return {routes , handleSearch,isSearch,textSearch}
+ 
+    return {handleSearch,isSearch,textSearch,routes}
     },
   }
 
@@ -49,7 +35,8 @@ import Button from '../Button/Button.vue'
 <template>
   <div class="navbar bg-primary">
     <div class="content flex-between navbar">
-      <ul class="navbar-list flex-between gap-20">
+      <ul class="navbar-list flex-between gap-20" 
+      :class="{active: isModel}">
         <li v-for="(route,index) in routes" :key="index" class="navbar-list__item color-white">{{route.name}}</li>
       </ul>
       <div
@@ -67,7 +54,7 @@ import Button from '../Button/Button.vue'
           class="navbar-group_search"
           @click="handleSearch"
         />
-        <div  class="navbar-group_menu" style="display: none">
+        <div @click="isModel = !isModel"  class="navbar-group_menu" style="display: none">
           <img src="../../assets/icon/menu.png" alt="" />
         </div>
         <Button text="Appointment" class="something"/>
@@ -94,4 +81,11 @@ import Button from '../Button/Button.vue'
 input::placeholder {
   color: var(--primary-color);
 }
+.active {
+  visibility: visible !important;
+}
+li:active{
+  opacity: 0.8;
+}
+
 </style>

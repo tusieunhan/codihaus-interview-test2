@@ -51,7 +51,7 @@
               class="footer-item__desc-email flex bg-acceny color-primary flex-center"
             >
               <input type="text" placeholder="Enter your email address" />
-              <img class="btn" src="./icon/Vector (1).svg" alt="" />
+              <img class="btn" src="src/assets/icon/Vector (1).svg" alt="" />
             </div>
           </ul>
         </div>
@@ -62,13 +62,13 @@
         </div>
         <div class="footer-copyright-social flex gap-20">
           <a href="#">
-            <img src="./icon/Vector (5).png" alt="" />
+            <img src="src/assets/icon/Vector (5).png" alt="" />
           </a>
           <a href="#">
-            <img src="./icon/Vector (6).png" alt="" />
+            <img src="src/assets/icon/Vector (6).png" alt="" />
           </a>
           <a href="#">
-            <img src="./icon/Vector (7).png" alt="" />
+            <img src="src/assets/icon/Vector (7).png" alt="" />
           </a>
         </div>
       </div>
@@ -77,7 +77,15 @@
 </template>
 
 <style scoped>
-a {
-  color: #42b983;
+li:hover {
+  opacity: 0.8;
+}
+ textarea::placeholder,
+ input::placeholder {
+  color: var(--primary-color);
+}
+input {
+  color: var(--primary-color);
+  font-family: "Poppins";
 }
 </style>

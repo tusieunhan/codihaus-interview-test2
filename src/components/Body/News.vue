@@ -1,99 +1,62 @@
-<script setup></script>
+<script >
+import { Swiper, SwiperSlide } from "swiper/vue";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/grid";
+import "swiper/css/pagination";
+import { Grid, Pagination } from "swiper";
+
+import { useStore } from 'vuex'
+import Title from '../Title/Title.vue'
+export default{
+  components:{
+    Title,
+    Swiper,
+    SwiperSlide,
+  },
+  setup(){
+    const store = useStore();
+    const { news} = store.state
+    return {modules: [Grid, Pagination],news }
+  } 
+}
+
+</script>
 
 <template>
   <div class="body-news">
-    <div class="title-G body-news__title">
-      <div class="title-second">
-        <p class="color-second w-700">Better information, Better health</p>
-      </div>
-      <div class="title-primary">
-        <p class="color-primary font-yeseva">News</p>
-      </div>
-    </div>
-    <div class="body-news__list">
-      <div class="body-news__item flex">
+    <Title title="Better information, Better health" desc="News" class="body-news__title"/>
+    <swiper :class="'body-news__list'"   :slidesPerView="2"
+    :grid="{
+      rows: 2,
+    }"
+    :spaceBetween="20"
+    :pagination="{
+      clickable: true,
+    }"
+    :modules="modules">
+      <swiper-slide v-for="(item) in news" :key="item.id" class="body-news__item flex">
         <div class="body-news__item-img">
-          <img src="./img/Rectangle 34.png" alt="" />
+          <img :src="item.photoUrl" alt="" />
         </div>
         <div class="news__item-content">
           <p class="news__item-content-day color-second textoneline">
-            Monday 05, September 2021 | By Author
+            {{item.dateAndAuthor}}
           </p>
           <p class="news__item-content-title textsecondline">
-            This Article’s Title goes Here, but not too long.
+            {{item.title}}
           </p>
           <div class="news__item-content-icon"></div>
           <div class="news__item-icon flex gap-5">
-            <img src="./icon/mat.png" alt="" /><span>68</span>
-            <img src="./icon/tim.png" alt="" /><span>68</span>
+            <img src="src/assets/icon/mat.png" alt="" /><span>{{item.countViews}}</span>
+            <img src="src/assets/icon/tim.png" alt="" /><span>{{item.countHearts}}</span>
           </div>
         </div>
-      </div>
-      <div class="body-news__item flex">
-        <div class="body-news__item-img">
-          <img src="./img/Rectangle 34.png" alt="" />
-        </div>
-        <div class="news__item-content">
-          <p class="news__item-content-day color-second textoneline">
-            Monday 05, September 2021 | By Author
-          </p>
-          <p class="news__item-content-title textsecondline">
-            This Article’s Title goes Here, but not too long.
-          </p>
-          <div class="news__item-content-icon"></div>
-          <div class="news__item-icon flex gap-5">
-            <img src="./icon/mat.png" alt="" /><span>68</span>
-            <img src="./icon/tim.png" alt="" /><span>68</span>
-          </div>
-        </div>
-      </div>
-      <div class="body-news__item flex">
-        <div class="body-news__item-img">
-          <img src="./img/Rectangle 34.png" alt="" />
-        </div>
-        <div class="news__item-content">
-          <p class="news__item-content-day color-second textoneline">
-            Monday 05, September 2021 | By Author
-          </p>
-          <p class="news__item-content-title textsecondline">
-            This Article’s Title goes Here, but not too long.
-          </p>
-          <div class="news__item-content-icon"></div>
-          <div class="news__item-icon flex gap-5">
-            <img src="./icon/mat.png" alt="" /><span>68</span>
-            <img src="./icon/tim.png" alt="" /><span>68</span>
-          </div>
-        </div>
-      </div>
-      <div class="body-news__item flex">
-        <div class="body-news__item-img">
-          <img src="./img/Rectangle 34.png" alt="" />
-        </div>
-        <div class="news__item-content">
-          <p class="news__item-content-day color-second textoneline">
-            Monday 05, September 2021 | By Author
-          </p>
-          <p class="news__item-content-title textsecondline">
-            This Article’s Title goes Here, but not too long.
-          </p>
-          <div class="news__item-content-icon"></div>
-          <div class="news__item-icon flex gap-5">
-            <img src="./icon/mat.png" alt="" /><span>68</span>
-            <img src="./icon/tim.png" alt="" /><span>68</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="dot-news dots">
-      <div class="dot"></div>
-      <div class="dot dot-active"></div>
-      <div class="dot"></div>
-    </div>
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
 
 <style scoped>
-a {
-  color: #42b983;
-}
+
 </style>

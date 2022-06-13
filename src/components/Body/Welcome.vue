@@ -1,5 +1,6 @@
 <script setup>
   import Title from '../Title/Title.vue';
+  import { WELCOME_DESC } from '../../Constant';
 </script>
 
 <template>
@@ -7,10 +8,7 @@
     <Title title="Welcome to Meddical" desc="A Great Place to Receive Care" classes="body-welcome-title" />
     <div class="body-welcome__desc">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-        placerat scelerisque tortor ornare ornare. Convallis felis vitae tortor
-        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim
-        et.
+       {{WELCOME_DESC}}
       </p>
     </div>
     <div class="body-welcome__btn flex gap-10 hover-o">

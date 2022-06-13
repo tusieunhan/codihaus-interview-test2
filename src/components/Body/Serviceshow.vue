@@ -27,7 +27,6 @@ export default {
     },
     setup(props){
       const { data } = props;
-      console.log(data)
     }
 }
 </script>
