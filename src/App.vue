@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar/Navbar.vue";
 import Banner from "./components/Banner/Banner.vue";
 import Subbanner from "./components/Subbanner/Subbanner.vue";
 import Book from "./components/Book/Book.vue";
-import Wrapper from "./components/Wrapper/Wrapper.vue";
+import Layout from "./Layout/Layout.vue";
 import Welcome from "./components/Body/Welcome.vue";
 import Service from "./components/Body/Service.vue";
 import Special from "./components/Body/Special.vue";
@@ -22,17 +22,17 @@ import Footer from "./components/Footer/Footer.vue";
     <Navbar></Navbar>
     <Banner></Banner>
     <Subbanner></Subbanner>
-    <Wrapper>
+    <Layout>
       <Welcome></Welcome>
       <Service></Service>
       <Special></Special>
-    </Wrapper>
+    </Layout>
     <Book></Book>
-    <Wrapper>
+    <Layout>
       <Doctor></Doctor>
       <News></News>
       <Contact></Contact>
-    </Wrapper>
+    </Layout>
     <Footer></Footer>
   </div>
 </template>

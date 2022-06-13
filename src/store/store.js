@@ -102,8 +102,8 @@ const store = createStore({
             doctors: [
                 {
                     name: "Tony Stark",
-                    photoUrl: "src/assets/img/3.png",
-                    career: "Neurology",
+                    photoUrl: "src/assets/img/1.png",
+                    career: "Web Developer",
                     desc: "Đen - Ai muốn nghe không (M/V)",
                     socials: [
                         {
@@ -143,7 +143,7 @@ const store = createStore({
                 {
                     name: "Bucky Barnes",
                     photoUrl: "src/assets/img/1.png",
-                    career: "Neurology",
+                    career: "Web Developer",
                     desc: "Đen - Ai muốn nghe không (M/V)",
                     socials: [
                         {
@@ -163,7 +163,7 @@ const store = createStore({
                 {
                     name: "Thor Odinson",
                     photoUrl: "src/assets/img/2.png",
-                    career: "Neurology",
+                    career: "Database Administrator",
                     desc: "Đen - Ai muốn nghe không (M/V)",
                     socials: [
                         {
@@ -183,7 +183,7 @@ const store = createStore({
                 {
                     name: "Steve Rogers",
                     photoUrl: "src/assets/img/3.png",
-                    career: "Neurology",
+                    career: "Accountant",
                     desc: "Đen - Ai muốn nghe không (M/V)",
                     socials: [
                         {
@@ -206,57 +206,57 @@ const store = createStore({
                     id: 1,
                     dateAndAuthor: "Monday 05, September 2021 | By TuSieuNhan",
                     title: "This Article’s Title goes Here, but not too long.",
-                    countHearts: 79,
-                    countViews: 999,
-                    photoUrl: "src/assets/img/Rectangle 34.png"
+                    countHearts: 72,
+                    countViews: 429,
+                    photoUrl: "https://ca-times.brightspotcdn.com/dims4/default/814cf1f/2147483647/strip/true/crop/3287x2191+0+0/resize/840x560!/format/webp/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F63%2F44%2F57051196402c8f520f07f88c6033%2F941914-how-a-bible-took-a-black-family-on-a-journey-into-the-past-jja-0014.jpg"
                 },
                 {
                     id: 2,
-                    dateAndAuthor: "Monday 05, September 2021 | By TuSieuNhan",
-                    title: "This Article’s Title goes Here, but not too long.",
-                    countHearts: 79,
-                    countViews: 999,
-                    photoUrl: "src/assets/img/Rectangle 34.png"
+                    dateAndAuthor: "Monday 03, September 2022 | By Steve Rogers",
+                    title: "Trump’s Campaign Chief Said Election Night Was ‘Too Early’",
+                    countHearts: 49,
+                    countViews: 111,
+                    photoUrl: "https://s.hdnux.com/photos/01/26/12/05/22585685/3/ratio3x2_550.jpg"
                 },
                 {
                     id: 3,
                     dateAndAuthor: "Monday 05, September 2021 | By TuSieuNhan",
-                    title: "This Article’s Title goes Here, but not too long.",
-                    countHearts: 79,
-                    countViews: 999,
-                    photoUrl: "src/assets/img/Rectangle 34.png"
+                    title: "CT’s Teixeira loses late in first title defense; ‘gonna keep...",
+                    countHearts: 72,
+                    countViews: 442,
+                    photoUrl: "https://s.hdnux.com/photos/01/26/12/66/22588803/3/ratio3x2_550.jpg"
                 },
                 {
                     id: 4,
-                    dateAndAuthor: "Monday 05, September 2021 | By TuSieuNhan",
-                    title: "This Article’s Title goes Here, but not too long.",
+                    dateAndAuthor: "Monday 01, September 2022 | By Thor Odinson",
+                    title: "Ex-Trump campaign manager pulls out of Jan. 6 hearing",
                     countHearts: 79,
-                    countViews: 999,
-                    photoUrl: "src/assets/img/Rectangle 34.png"
+                    countViews: 11,
+                    photoUrl: "https://ca-times.brightspotcdn.com/dims4/default/0a58b4d/2147483647/strip/true/crop/6000x4000+0+0/resize/840x560!/format/webp/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F59%2F15%2Fea81be5e4c028a01504a5780df01%2F971104-na-pol-0609-jan6-hearing-kkn-0066.jpg"
                 },
                 {
                     id: 5,
-                    dateAndAuthor: "Monday 05, September 2021 | By TuSieuNhan",
+                    dateAndAuthor: "Monday 05, September 2021 | By Putin",
                     title: "This Article’s Title goes Here, but not too long.",
-                    countHearts: 79,
-                    countViews: 999,
+                    countHearts: 739,
+                    countViews: 1344,
                     photoUrl: "src/assets/img/Rectangle 34.png"
                 },
                 {
-                    id: 56,
+                    id: 323,
                     dateAndAuthor: "Monday 05, September 2021 | By TuSieuNhan",
-                    title: "This Article’s Title goes Here, but not too long.",
-                    countHearts: 79,
-                    countViews: 999,
-                    photoUrl: "src/assets/img/Rectangle 34.png"
+                    title: "CT’s Teixeira loses late in first title defense; ‘gonna keep...",
+                    countHearts: 72,
+                    countViews: 442,
+                    photoUrl: "https://s.hdnux.com/photos/01/26/12/66/22588803/3/ratio3x2_550.jpg"
                 },
                 {
-                    id: 555,
-                    dateAndAuthor: "Monday 05, September 2021 | By TuSieuNhan",
-                    title: "This Article’s Title goes Here, but not too long.",
+                    id: 2324,
+                    dateAndAuthor: "Monday 01, September 2022 | By Thor Odinson",
+                    title: "Ex-Trump campaign manager pulls out of Jan. 6 hearing",
                     countHearts: 79,
-                    countViews: 999,
-                    photoUrl: "src/assets/img/Rectangle 34.png"
+                    countViews: 11,
+                    photoUrl: "https://ca-times.brightspotcdn.com/dims4/default/0a58b4d/2147483647/strip/true/crop/6000x4000+0+0/resize/840x560!/format/webp/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F59%2F15%2Fea81be5e4c028a01504a5780df01%2F971104-na-pol-0609-jan6-hearing-kkn-0066.jpg"
                 },
                 {
                     id: 434,
